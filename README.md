@@ -4,7 +4,25 @@ This is a ake plugin to test Travis CI
 
 
 ## Updating `.travis.ylm`
-Adding comments to each section
+Adding comments to each section and adding Job names
+
+```
+matrix:
+  include:
+    - name: Coding standards
+      php: 7.3
+      env: WP_VERSION=latest
+
+    # Canary for our oldest-supported version
+    - name: Legacy
+      php: 5.6
+      env: WP_VERSION=4.9
+
+    # Nightly versions of PHP and WordPress.
+    - name: Bleeding edge
+      php: 7.4snapshot
+      env: WP_VERSION=trunk
+``` 
 
 ## Creating more tests
 ```php
