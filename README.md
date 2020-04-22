@@ -2,10 +2,21 @@
 # wp-meta-verify
 This is a ake plugin to test Travis CI
 
-## Creating repository
-```console
-$ cd /srv/www/camisetas.codigo.co.uk/current/web/app
-$ git clone https://github.com/pablorica/wp-meta-verify
+## Creating more tests
+```php
+    public function testQuantityTransformIsCorrect() {
+	    $result = $this->class_instance->get_quantity( '1.000 €' );
+	    $this->assertEquals( 1000, $result );
+	}
+    public function testVatOfIntegerIsCorrect() {
+	    $result = $this->class_instance->get_vat( 1000 );
+	    $this->assertEquals( 210, $result );
+	}
+	  
+	public function testVatOfStringIsCorrect() {
+	    $result = $this->class_instance->get_vat( '1.000 €' );
+	    $this->assertEquals( 210, $result );
+	}
 ```
 ## Updating `.travis.ylm`
 
@@ -45,3 +56,7 @@ matrix:
       env: WP_VERSION=trunk
 ``` 
 
+## Creating repository
+```console
+$ cd /srv/www/camisetas.codigo.co.uk/current/web/app
+$ git clone https://github.com/pablorica/wp-meta-verify
