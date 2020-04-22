@@ -1,6 +1,7 @@
 
 # wp-meta-verify
-This is a ake plugin to test Travis CI
+![travis ci build passing](https://travis-ci.com/pablorica/wp-meta-verify.svg?branch=master)
+This is a fake plugin to test Travis CI
 
 
 ## Updating `.travis.ylm`
