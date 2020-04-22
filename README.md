@@ -2,6 +2,10 @@
 # wp-meta-verify
 This is a ake plugin to test Travis CI
 
+
+## Updating `.travis.ylm`
+Adding comments to each section
+
 ## Creating more tests
 ```php
     public function testQuantityTransformIsCorrect() {
